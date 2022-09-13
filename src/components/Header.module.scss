@@ -1,0 +1,102 @@
+@import '../index.scss';
+
+.navbar {
+  background-color: $primary;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+  position: fixed;
+  bottom: 0;
+  top: auto;
+  width: 100%;
+  transition: background-color 1s ease-in-out;
+}
+
+.navlinkscontainer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  max-width: 30rem;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navlink {
+  text-decoration: none;
+  color: $light;
+  font-size: 1rem; // 20px
+  position: relative;
+  padding-bottom: 6px;
+  box-shadow: 0px 2px 0px $clear;
+  transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 2px 0px $light;
+    transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+}
+
+// back to top
+.backtotop {
+  position: absolute;
+  top: -3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.backtotoplink {
+  color: $primary;
+  animation: floating 1s ease infinite alternate;
+
+  .arrowupicon {
+    padding-left: 0.5rem;
+    margin-bottom: -0.15rem;
+  }
+}
+
+@media (min-width: 480px) {
+  .navbar {
+    top: 0;
+    bottom: auto;
+    background-color: $light;
+
+    &.navbar_scroll {
+      background-color: $primary;
+    }
+  }
+
+  .navlink {
+    color: $primary;
+
+    &:hover {
+      box-shadow: 0px 2px 0px $primary;
+    }
+
+    &.navlink_scroll {
+      color: $light;
+
+      &:hover {
+        box-shadow: 0px 2px 0px $light;
+      }
+    }
+  }
+}
+
+// animations
+@keyframes floating {
+  from {
+    transform: translateY(0.5rem);
+  }
+  to {
+    transform: translateY(-0.5rem);
+  }
+}
