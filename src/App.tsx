@@ -1,9 +1,17 @@
 import React from 'react';
-import './App.css';
+import styles from './App.module.scss';
 import Header from './components/Header';
+import About from './components/About';
 
 function App() {
-  return <Header />;
+  return (
+    <div className={styles.main}>
+      <Header />
+      <div className={styles.container}>
+        <About />
+      </div>
+    </div>
+  );
 }
 
 export default App;

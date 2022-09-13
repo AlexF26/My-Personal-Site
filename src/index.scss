@@ -6,9 +6,16 @@
 
 // color variables
 $primary: rgba(101, 201, 255, 1);
+$primary-hover: rgba(81, 161, 204, 1);
 $emphasis: #f6fcff;
 $light: #ffffff;
+$body: #484848;
 $clear: rgba(255, 255, 255, 0);
+$hair: #724133;
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
