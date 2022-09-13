@@ -95,3 +95,25 @@
     font-size: 1.15rem;
   }
 }
+
+// avatar animation
+#righteyelid,
+#lefteyelid {
+  animation: blink 3.5s ease-in-out infinite 2s alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes blink {
+  0% {
+    transform: translateY(0);
+  }
+
+  3% {
+    transform: translateY(19.5px);
+  }
+
+  6% {
+    transform: translateY(0);
+  }
+}
