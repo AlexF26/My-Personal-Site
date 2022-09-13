@@ -9,11 +9,17 @@
   gap: 1.5rem;
 }
 
+// avatar section
 .avatarcontainer {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
+  button {
+    margin-top: -3.5rem;
+  }
 }
 
 .avatar {
@@ -23,7 +29,20 @@
   object-fit: contain;
 }
 
-// copy content
+.avatarsvg {
+  width: 100%;
+  min-width: 300px;
+}
+
+.contactemail,
+.contactnumber {
+  font: 1rem;
+  margin-top: 0.5rem;
+  color: $primary;
+  font-weight: 400;
+}
+
+// copy section
 .aboutinfocontainer {
   width: 100%;
   padding: 1rem;

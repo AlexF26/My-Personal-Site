@@ -19,6 +19,7 @@ function About() {
           viewBox="0 0 375 375"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className={styles.avatarsvg}
         >
           <g id="avatar-svg">
             <path
@@ -159,6 +160,9 @@ function About() {
           </g>
         </svg>
         <Button color="secondary" />
+        <div className={styles.contactemail}>alex.feller26@gmail.com</div>
+
+        <div className={styles.contactnumber}>757-374-5530</div>
       </div>
       <div className={styles.aboutinfocontainer}>
         <h1 className={styles.aboutheadline}>Alex Feller</h1>
