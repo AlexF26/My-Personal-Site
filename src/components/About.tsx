@@ -7,6 +7,7 @@ import {
   faBehanceSquare,
   faDribbbleSquare,
 } from '@fortawesome/free-brands-svg-icons';
+import Button from './Button';
 
 function About() {
   return (
@@ -157,6 +158,7 @@ function About() {
             />
           </g>
         </svg>
+        <Button color="secondary" />
       </div>
       <div className={styles.aboutinfocontainer}>
         <h1 className={styles.aboutheadline}>Alex Feller</h1>

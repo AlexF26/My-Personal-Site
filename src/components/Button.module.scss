@@ -1,0 +1,41 @@
+@import '../index.scss';
+
+.button {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  background-color: $primary;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border: 1px solid $primary;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s ease-in-out;
+  font-family: inter, sans-serif;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  // prop variety
+  &.primary {
+    background-color: $primary;
+    border: 3px solid $black10;
+    color: $light;
+
+    &:hover {
+      background-color: $primary-hover;
+    }
+  }
+
+  &.secondary {
+    background-color: $light;
+    border: 3px solid $primary;
+    color: $primary;
+
+    &:hover {
+      background-color: $secondary-hover;
+    }
+  }
+}
