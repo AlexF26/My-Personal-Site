@@ -10,3 +10,99 @@
   max-width: 1200px;
   margin: auto;
 }
+
+.workheadline {
+  position: relative;
+  margin-bottom: 3rem;
+
+  &::after {
+    content: '';
+    height: 2px;
+    width: 2rem;
+    background-color: $primary;
+    position: absolute;
+    bottom: -1rem;
+    left: 0.5rem;
+  }
+}
+.cardcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+  width: 100%;
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $light;
+  border: 4px solid $primary;
+  padding: 2rem;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.lottiecard {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.cardparagraph {
+  font-size: 1.25rem;
+  color: $body;
+  font-family: inter, sans-serif;
+  margin: 1rem 0 1.5rem;
+}
+
+@media (min-width: 480px) {
+  .card {
+    flex-direction: row;
+    padding: 4rem 2rem;
+  }
+
+  .lottiecard {
+    width: 150px;
+    height: 150px;
+  }
+
+  .cardcontent {
+    margin-left: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .workcontainer {
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+  }
+
+  .worksection {
+    padding: 10rem 1rem;
+  }
+
+  .cardcontainer {
+    flex-direction: row;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .cardcontent {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 980px) {
+  .card {
+    flex-direction: row;
+  }
+
+  .cardcontent {
+    margin-left: 2rem;
+  }
+}

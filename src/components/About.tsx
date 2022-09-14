@@ -159,7 +159,7 @@ function About() {
             />
           </g>
         </svg>
-        <Button color="secondary" />
+        <Button text="Contact Me" color="secondary" size="large" />
         <div className={styles.contactemail}>alex.feller26@gmail.com</div>
 
         <div className={styles.contactnumber}>757-374-5530</div>
@@ -169,7 +169,7 @@ function About() {
         <h3 className={styles.abouttitle}>Visual Designer &amp; Front End Developer</h3>
         <p className={styles.aboutparagraph}>
           I am currently a visual designer and front-end developer from Virginia with 5 years of
-          experience working on b2b experiences and I have a passion for all things design and
+          experience working on b2b experiences. I have a passion for all things design and
           development! I enjoy solving complex problems and putting user experience front and center
           of all my solutions. Creating prototypes and getting user feedback to make meaningful
           change is what I strive to accomplish daily. I also enjoy developing and bringing designs
