@@ -166,7 +166,6 @@
   }
 }
 
-#mouth,
 #righteye,
 #lefteye {
   animation: grow 8s ease-in-out infinite 2s forwards;
@@ -193,5 +192,22 @@
 
   100% {
     transform: scale(1);
+  }
+}
+
+#toplip,
+#bottomlip {
+  transition: transform 0.25s ease-in-out;
+}
+
+.avatar {
+  &:hover {
+    #toplip {
+      transform: translateY(-15px) !important;
+    }
+
+    #bottomlip {
+      transform: translateY(15px) !important;
+    }
   }
 }
