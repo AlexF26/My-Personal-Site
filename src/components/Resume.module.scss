@@ -26,6 +26,19 @@
   margin-bottom: 6rem;
 }
 
+.skillsblock {
+  margin-top: 3rem;
+
+  &:first-of-type {
+    margin-top: 3rem;
+  }
+
+  p {
+    line-height: 140%;
+    color: $body;
+  }
+}
+
 .resumeblock {
   margin-top: 6rem;
 
@@ -67,7 +80,7 @@
   font-size: 1rem;
   color: $primary;
   font-weight: 400;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
 }
 
 @media (min-width: 480px) {

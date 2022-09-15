@@ -6,17 +6,28 @@ function Resume() {
     <div className={styles.resumesection}>
       <div className={styles.skillscontainer}>
         <h2 className={styles.resumeheadline}>Skills</h2>
-        <div className={styles.resumeblock}>
+        <div className={styles.skillsblock}>
           <h3 className={styles.resumeblocktitle}>Design</h3>
           <p>Figma, Invision, Miro, Zeroheight, Userzoom, Dynamic Yield, Illustrator, Photoshop</p>
         </div>
-        <div className={styles.resumeblock}>
+        <div className={styles.skillsblock}>
           <h3 className={styles.resumeblocktitle}>Development</h3>
-          <p>HTML, CSS, SASS, JavaScript, React, StoryBook, Git, GitHub</p>
+          <p>
+            HTML, CSS, SASS, CSS Modules, JavaScript, Typescript, React, Node, Webpack, StoryBook,
+            Git, GitHub
+          </p>
         </div>
-        <div className={styles.resumeblock}>
-          <h3 className={styles.resumeblocktitle}>Other</h3>
+        <div className={styles.skillsblock}>
+          <h3 className={styles.resumeblocktitle}>Projects</h3>
           <p>Jira &amp; Workfront - Project management</p>
+        </div>
+        <div className={styles.skillsblock}>
+          <h3 className={styles.resumeblocktitle}>Education</h3>
+          <p>Longwood University - Bachelor's of Graphic Design</p>
+        </div>
+        <div className={styles.skillsblock}>
+          <h3 className={styles.resumeblocktitle}>Inspiration</h3>
+          <p>Baymard, Nielsen Norman Group, Dribbble, Behance, Smashing Magazine</p>
         </div>
       </div>
       <div className={styles.workexperience}>

@@ -20,9 +20,7 @@ function Work() {
               speed={0.5}
             />
             <div className={styles.cardcontent}>
-              <p className={styles.cardparagraph}>
-                View my design projects and case studies on behance
-              </p>
+              <p className={styles.cardparagraph}>View my projects and case studies on behance</p>
               <Button text="View Designs" color="primary" size="small" />
             </div>
           </div>
