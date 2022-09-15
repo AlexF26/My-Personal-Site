@@ -1,0 +1,52 @@
+@import '../index.scss';
+
+.resumesection {
+  padding: 6rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.resumeheadline {
+  position: relative;
+
+  &::after {
+    content: '';
+    height: 2px;
+    width: 2rem;
+    background-color: $primary;
+    position: absolute;
+    bottom: -1rem;
+    left: 0.5rem;
+  }
+}
+
+.resumeblock {
+  margin-top: 6rem;
+
+  &:first-of-type {
+    margin-top: 3rem;
+  }
+}
+
+.resumeblocktitle {
+  color: $primary;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+@media (min-width: 480px) {
+  .resumesection {
+    flex-direction: row;
+  }
+
+  .skillscontainer {
+    width: 40%;
+  }
+
+  .workexperience {
+    width: 60%;
+  }
+}

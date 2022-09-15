@@ -3,6 +3,7 @@ import styles from './App.module.scss';
 import Header from './components/Header';
 import About from './components/About';
 import Work from './components/Work';
+import Resume from './components/Resume';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <div className={styles.container}>
         <About />
         <Work />
+        <Resume />
       </div>
     </div>
   );
