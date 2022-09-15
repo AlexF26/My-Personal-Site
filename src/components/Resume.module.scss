@@ -6,7 +6,6 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
 }
 
 .resumeheadline {
@@ -23,11 +22,37 @@
   }
 }
 
+.skillscontainer {
+  margin-bottom: 6rem;
+}
+
 .resumeblock {
   margin-top: 6rem;
 
   &:first-of-type {
     margin-top: 3rem;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    margin-top: 1.25rem;
+    margin-left: 1.25rem;
+  }
+
+  li {
+    margin-top: 0.5rem;
+    line-height: 140%;
+    color: $body;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  p {
+    line-height: 140%;
+    color: $body;
   }
 }
 
@@ -35,18 +60,32 @@
   color: $primary;
   font-size: 1.25rem;
   font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.resumedates {
+  font-size: 1rem;
+  color: $primary;
+  font-weight: 400;
+  letter-spacing: 0.1em;
 }
 
 @media (min-width: 480px) {
   .resumesection {
     flex-direction: row;
+    max-width: 50rem;
   }
 
   .skillscontainer {
-    width: 40%;
+    width: 30%;
+    margin-bottom: 0;
   }
 
   .workexperience {
-    width: 60%;
+    width: 70%;
+    border-left: 2px solid $primary;
+    padding-left: 3rem;
+    margin-left: 3rem;
   }
-}
+}y
+
