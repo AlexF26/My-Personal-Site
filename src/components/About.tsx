@@ -165,7 +165,15 @@ function About() {
           </g>
         </svg>
 
-        <Button text="Contact Me" color="secondary" size="large" />
+        <Button
+          text="Contact Me"
+          color="secondary"
+          size="large"
+          action={(e) => {
+            e.preventDefault();
+            window.location.href = 'mailto:alex.feller26@gmail.com';
+          }}
+        />
         <div className={styles.contactemail}>alex.feller26@gmail.com</div>
 
         <div className={styles.contactnumber}>757-374-5530</div>

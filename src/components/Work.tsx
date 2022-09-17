@@ -21,7 +21,15 @@ function Work() {
             />
             <div className={styles.cardcontent}>
               <p className={styles.cardparagraph}>View my projects and case studies on behance</p>
-              <Button text="View Designs" color="primary" size="small" />
+              <Button
+                text="View Designs"
+                color="primary"
+                size="small"
+                action={(e) => {
+                  e.preventDefault();
+                  window.location.href = 'https://www.behance.net/alexfeller1';
+                }}
+              />
             </div>
           </div>
           <div className={styles.card}>
@@ -34,7 +42,15 @@ function Work() {
             />
             <div className={styles.cardcontent}>
               <p className={styles.cardparagraph}>View my development work and code on Github</p>
-              <Button text="View Code" color="primary" size="small" />
+              <Button
+                text="View Code"
+                color="primary"
+                size="small"
+                action={(e) => {
+                  e.preventDefault();
+                  window.location.href = 'https://github.com/AlexF26';
+                }}
+              />
             </div>
           </div>
         </div>

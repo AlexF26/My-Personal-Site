@@ -5,11 +5,16 @@ interface ButtonProps {
   color: string;
   text: string;
   size: string;
+  action: any;
 }
 
 function Button(props: ButtonProps) {
   return (
-    <button className={`${styles.button} ${styles[props.color]} ${styles[props.size]}`}>
+    <button
+      type="button"
+      className={`${styles.button} ${styles[props.color]} ${styles[props.size]}`}
+      onClick={props.action}
+    >
       {props.text}
     </button>
   );
