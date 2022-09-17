@@ -7,7 +7,7 @@ import Button from './Button';
 
 function Work() {
   return (
-    <div className={styles.workcontainer}>
+    <div id="Work" className={styles.workcontainer}>
       <div className={styles.worksection}>
         <h2 className={styles.workheadline}>View my Work</h2>
         <div className={styles.cardcontainer}>

@@ -11,7 +11,7 @@ import Button from './Button';
 
 function About() {
   return (
-    <div className={styles.aboutsection}>
+    <div id="About" className={styles.aboutsection}>
       <div className={styles.avatarcontainer}>
         <svg
           className={styles.avatar}

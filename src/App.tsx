@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 function App() {
   const listRef = useRef(null);
 
-  // scroll position
+  // get main scroll position
   const [scrollValue, setScrollValue] = useState(0);
 
   const handleScroll = () => {
@@ -22,25 +22,7 @@ function App() {
     window.addEventListener('scroll', handleScroll);
   }, []);
 
-  // useEffect(() => {
-  //   const onScroll = (e) => {
-  //     setScrollValue(e.target.documentElement.scrollTop);
-  //   };
-
-  //   window.addEventListener('scroll', onScroll);
-
-  //   return () => window.removeEventListener('scroll', onScroll);
-  // }, [scrollValue]);
-
-  // element height
-  // const [heightValue, setHeightValue] = useState();
-
-  // window.addEventListener('resize', () => {
-  //   setHeightValue(listRef.current.clientHeight);
-  // });
-
-  // console.log(heightValue);
-  // console.log(scrollValue);
+  console.log(scrollValue); // log scroll pos
 
   return (
     <>

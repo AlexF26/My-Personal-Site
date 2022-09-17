@@ -1,10 +1,11 @@
 import React from 'react';
 import { useEffect, useState, useRef } from 'react';
 import styles from './Header.module.scss';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import { navLinks } from './HeaderLinks';
+import { HashLink as Link } from 'react-router-hash-link';
 
 interface AppProps {
   scrollvalue: number;
@@ -15,7 +16,7 @@ function Header(props: AppProps) {
   const generateNavLinks = navLinks.map((item) => {
     return (
       <li>
-        <Link to="" className={`${styles.navlink}`}>
+        <Link to={item.url} className={`${styles.navlink}`}>
           {item.link}
         </Link>
       </li>
@@ -38,13 +39,6 @@ function Header(props: AppProps) {
       window.addEventListener('scroll', () => setScroll(window.pageYOffset > navHeight));
     }
   });
-
-  // scrollPos - scroll position
-  const [scrollPos, setScrollPos] = useState(0);
-
-  useEffect(() => {
-    setScrollPos(window.pageYOffset);
-  }, [scrollPos]);
 
   return (
     <nav ref={navRef} className={`${styles.navbar} ${scroll && styles.navbar_scroll}`}>

@@ -3,7 +3,7 @@ import styles from './Resume.module.scss';
 
 function Resume() {
   return (
-    <div className={styles.resumesection}>
+    <div id="Resume" className={styles.resumesection}>
       <div className={styles.skillscontainer}>
         <h2 className={styles.resumeheadline}>Skills</h2>
         <div className={styles.skillsblock}>
