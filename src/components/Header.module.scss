@@ -71,21 +71,21 @@
 
     &.navbar_scroll {
       background-color: $primary;
+
+      .navlink {
+        color: $light;
+
+        &:hover {
+          box-shadow: 0px 2px 0px $light;
+        }
+      }
     }
-  }
 
-  .navlink {
-    color: $primary;
-
-    &:hover {
-      box-shadow: 0px 2px 0px $primary;
-    }
-
-    &.navlink_scroll {
-      color: $light;
+    .navlink {
+      color: $primary;
 
       &:hover {
-        box-shadow: 0px 2px 0px $light;
+        box-shadow: 0px 2px 0px $primary;
       }
     }
   }

@@ -4,9 +4,25 @@ import styles from './Header.module.scss';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretUp } from '@fortawesome/free-solid-svg-icons';
+import { navLinks } from './HeaderLinks';
 
-function Header() {
-  //nav dimensions
+interface AppProps {
+  scrollvalue: number;
+}
+
+function Header(props: AppProps) {
+  // genereate nav links
+  const generateNavLinks = navLinks.map((item) => {
+    return (
+      <li>
+        <Link to="" className={`${styles.navlink}`}>
+          {item.link}
+        </Link>
+      </li>
+    );
+  });
+
+  // get navbar dimensions for scrollbar animnation
   const [navHeight, setNavHeight] = useState(0);
   const navRef = useRef(null);
 
@@ -14,33 +30,25 @@ function Header() {
     setNavHeight(navRef.current.clientHeight);
   }, []);
 
-  // scrollbar animation
+  // scroll boolean - activate scrollbar animation
   const [scroll, setScroll] = useState(false);
+
   useEffect(() => {
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', () => setScroll(window.pageYOffset > navHeight));
     }
   });
 
+  // scrollPos - scroll position
+  const [scrollPos, setScrollPos] = useState(0);
+
+  useEffect(() => {
+    setScrollPos(window.pageYOffset);
+  }, [scrollPos]);
+
   return (
-    <nav ref={navRef} className={`${styles.navbar} ${scroll ? styles.navbar_scroll : ''}`}>
-      <ul className={styles.navlinkscontainer}>
-        <li>
-          <Link to="" className={`${styles.navlink} ${scroll ? styles.navlink_scroll : ''}`}>
-            About
-          </Link>
-        </li>
-        <li>
-          <Link to="" className={`${styles.navlink} ${scroll ? styles.navlink_scroll : ''}`}>
-            Work
-          </Link>
-        </li>
-        <li>
-          <Link to="" className={`${styles.navlink} ${scroll ? styles.navlink_scroll : ''}`}>
-            Resume
-          </Link>
-        </li>
-      </ul>
+    <nav ref={navRef} className={`${styles.navbar} ${scroll && styles.navbar_scroll}`}>
+      <ul className={styles.navlinkscontainer}>{generateNavLinks}</ul>
       {
         <Link to="" className={styles.backtotop}>
           <div className={styles.backtotoplink}>
