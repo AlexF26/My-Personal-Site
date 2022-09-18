@@ -23,10 +23,12 @@ function Header(props: AppProps) {
 
   // get navbar dimensions for scrollbar animnation
   const [navHeight, setNavHeight] = useState(0);
-  const navRef = useRef(null);
+  const navRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    setNavHeight(navRef.current.clientHeight);
+    if (navRef.current != null) {
+      setNavHeight(navRef.current.clientHeight);
+    }
   }, []);
 
   // scroll boolean - activate scrollbar animation

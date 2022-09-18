@@ -22,7 +22,7 @@ function App() {
     window.addEventListener('scroll', handleScroll);
   }, []);
 
-  console.log(scrollValue); // log scroll pos
+  //console.log(listRef); // log scroll pos
 
   return (
     <>
