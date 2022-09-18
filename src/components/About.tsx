@@ -169,8 +169,7 @@ function About() {
           text="Contact Me"
           color="secondary"
           size="large"
-          action={(e) => {
-            e.preventDefault();
+          action={() => {
             window.location.href = 'mailto:alex.feller26@gmail.com';
           }}
         />

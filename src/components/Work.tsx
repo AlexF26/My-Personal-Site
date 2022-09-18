@@ -25,8 +25,7 @@ function Work() {
                 text="View Designs"
                 color="primary"
                 size="small"
-                action={(e) => {
-                  e.preventDefault();
+                action={() => {
                   window.location.href = 'https://www.behance.net/alexfeller1';
                 }}
               />
@@ -46,8 +45,7 @@ function Work() {
                 text="View Code"
                 color="primary"
                 size="small"
-                action={(e) => {
-                  e.preventDefault();
+                action={() => {
                   window.location.href = 'https://github.com/AlexF26';
                 }}
               />
