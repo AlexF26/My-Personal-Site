@@ -2,7 +2,7 @@
 
 .navbar {
   background-color: $primary;
-  height: 60px;
+  height: 80px;
   display: flex;
   justify-content: center;
   z-index: 999;
@@ -42,29 +42,9 @@
   }
 }
 
-// back to top
-.backtotop {
-  position: absolute;
-  top: -3rem;
-  height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-}
-
-.backtotoplink {
-  color: $primary;
-  animation: floating 1s ease infinite alternate;
-
-  .arrowupicon {
-    padding-left: 0.5rem;
-    margin-bottom: -0.15rem;
-  }
-}
-
 @media (min-width: 480px) {
   .navbar {
+    height: 60px;
     top: 0;
     bottom: auto;
     background-color: $light;
@@ -88,19 +68,5 @@
         box-shadow: 0px 2px 0px $primary;
       }
     }
-  }
-
-  .backtotop {
-    display: none;
-  }
-}
-
-// animations
-@keyframes floating {
-  from {
-    transform: translateY(0.5rem);
-  }
-  to {
-    transform: translateY(-0.5rem);
   }
 }

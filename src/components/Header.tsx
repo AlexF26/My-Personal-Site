@@ -2,8 +2,6 @@ import React from 'react';
 import { useEffect, useState, useRef } from 'react';
 import styles from './Header.module.scss';
 // import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import { navLinks } from './HeaderLinks';
 import { HashLink as Link } from 'react-router-hash-link';
 
@@ -43,13 +41,6 @@ function Header(props: AppProps) {
   return (
     <nav ref={navRef} className={`${styles.navbar} ${scroll && styles.navbar_scroll}`}>
       <ul className={styles.navlinkscontainer}>{generateNavLinks}</ul>
-      {
-        <Link to="" className={styles.backtotop}>
-          <div className={styles.backtotoplink}>
-            Back to top <FontAwesomeIcon className={styles.arrowupicon} icon={faCaretUp} />
-          </div>
-        </Link>
-      }
     </nav>
   );
 }
