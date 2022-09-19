@@ -8,7 +8,7 @@ import {
   faDribbbleSquare,
 } from '@fortawesome/free-brands-svg-icons';
 import Button from './Button';
-import AnimatedAvatar from '../assets/AnimatedAvatar';
+import AnimatedAvatar from './AnimatedAvatar';
 
 function About() {
   return (
