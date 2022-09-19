@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Work.module.scss';
 import { Player } from '@lottiefiles/react-lottie-player';
-import lottiedev from '../assets/98561-coding-animation.json';
-import lottiedesign from '../assets/98574-web-site-design.json';
+import lottiedev from '../assets/lottiedev.json';
+import lottiedesign from '../assets/lottiedesign.json';
 import Button from './Button';
 
 function Work() {
