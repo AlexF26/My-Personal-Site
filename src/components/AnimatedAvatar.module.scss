@@ -7,6 +7,24 @@
   object-fit: contain;
 }
 
+.clickme {
+  display: block;
+}
+
+.hoverme {
+  display: none;
+}
+
+@media (hover: hover) {
+  .clickme {
+    display: none;
+  }
+
+  .hoverme {
+    display: block;
+  }
+}
+
 // avatar animation
 #righteyelid,
 #lefteyelid {
