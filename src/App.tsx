@@ -22,8 +22,6 @@ function App() {
     window.addEventListener('scroll', handleScroll);
   }, []);
 
-  //console.log(listRef); // log scroll pos
-
   return (
     <>
       <Header scrollvalue={scrollValue} />
