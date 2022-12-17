@@ -16,7 +16,8 @@ function Footer() {
     <div className={styles.footercontainer}>
       <div onClick={scrollToTop} className={styles.backtotop}>
         <div className={styles.backtotoplink}>
-          Back to top <FontAwesomeIcon className={styles.arrowupicon} icon={faCaretUp} />
+          Back to top{' '}
+          <FontAwesomeIcon className={styles.arrowupicon} icon={faCaretUp} />
         </div>
       </div>
     </div>
