@@ -7,8 +7,8 @@ import {
   faBehanceSquare,
   faDribbbleSquare,
 } from '@fortawesome/free-brands-svg-icons';
-import Button from './Button';
-import AnimatedAvatar from './AnimatedAvatar';
+import Button from '../button/Button';
+import AnimatedAvatar from '../avatar/AnimatedAvatar';
 
 function About() {
   return (
@@ -29,17 +29,23 @@ function About() {
       </div>
       <div className={styles.aboutinfocontainer}>
         <h1 className={styles.aboutheadline}>Alex Feller</h1>
-        <h3 className={styles.abouttitle}>Visual Designer &amp; Front End Developer</h3>
+        <h3 className={styles.abouttitle}>
+          Visual Designer &amp; Front End Developer
+        </h3>
         <p className={styles.aboutparagraph}>
-          I am currently a visual designer and front-end developer from Virginia with 5 years of
-          experience working on b2b experiences. I have a passion for all things design and
-          development! I enjoy solving complex problems and putting user experience front and center
-          of all my solutions. Creating prototypes and getting user feedback to make meaningful
-          change is what I strive to accomplish daily. I also enjoy developing and bringing designs
-          to life whether it's creating components or complete experiences.
+          I am currently a visual designer and front-end developer from Virginia with
+          5 years of experience working on b2b experiences. I have a passion for all
+          things design and development! I enjoy solving complex problems and putting
+          user experience front and center of all my solutions. Creating prototypes
+          and getting user feedback to make meaningful change is what I strive to
+          accomplish daily. I also enjoy developing and bringing designs to life
+          whether it's creating components or complete experiences.
         </p>
         <div className={styles.sociallinkscontainer}>
-          <a className={styles.aboutlink} href="https://www.linkedin.com/in/aef2662/">
+          <a
+            className={styles.aboutlink}
+            href="https://www.linkedin.com/in/aef2662/"
+          >
             <FontAwesomeIcon className={styles.socialicon} icon={faLinkedin} />
           </a>
           <a className={styles.aboutlink} href="https://www.behance.net/alexfeller1">
