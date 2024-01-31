@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Work.module.scss';
 import { Player } from '@lottiefiles/react-lottie-player';
-import lottiedev from '../assets/lottiedesign.json';
-import lottiedesign from '../assets/lottiedev.json';
-import Button from './Button';
+import lottiedev from '../../assets/lottiedesign.json';
+import lottiedesign from '../../assets/lottiedev.json';
+import Button from '../button/Button';
 
 function Work() {
   return (
@@ -20,7 +20,9 @@ function Work() {
               speed={0.5}
             />
             <div className={styles.cardcontent}>
-              <p className={styles.cardparagraph}>View my projects and case studies on behance</p>
+              <p className={styles.cardparagraph}>
+                View my projects and case studies on behance
+              </p>
               <Button
                 text="View Designs"
                 color="primary"
@@ -40,7 +42,9 @@ function Work() {
               speed={0.5}
             />
             <div className={styles.cardcontent}>
-              <p className={styles.cardparagraph}>View my development work and code on Github</p>
+              <p className={styles.cardparagraph}>
+                View my development work and code on Github
+              </p>
               <Button
                 text="View Code"
                 color="primary"

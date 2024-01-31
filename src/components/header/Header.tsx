@@ -36,12 +36,17 @@ function Header(props: AppProps) {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', () => setScroll(window.pageYOffset > navHeight));
+      window.addEventListener('scroll', () =>
+        setScroll(window.pageYOffset > navHeight)
+      );
     }
   });
 
   return (
-    <nav ref={navRef} className={`${styles.navbar} ${scroll && styles.navbar_scroll}`}>
+    <nav
+      ref={navRef}
+      className={`${styles.navbar} ${scroll && styles.navbar_scroll}`}
+    >
       <ul className={styles.navlinkscontainer}>{generateNavLinks}</ul>
     </nav>
   );
