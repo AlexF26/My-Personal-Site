@@ -1,55 +1,76 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { useEffect, useState, useRef } from 'react';
 import styles from './Header.module.scss';
-// import { Link } from 'react-router-dom';
-import { navLinks } from './HeaderLinks';
 import { HashLink as Link } from 'react-router-hash-link';
 
-interface AppProps {
-  scrollvalue: number;
-}
-
-function Header(props: AppProps) {
-  // genereate nav links
-  const generateNavLinks = navLinks.map((item) => {
-    return (
-      <li>
-        <Link to={item.url} className={`${styles.navlink}`}>
-          {item.link}
-        </Link>
-      </li>
-    );
-  });
-
-  // get navbar dimensions for scrollbar animnation
+export const Header = () => {
   const [navHeight, setNavHeight] = useState(0);
+  const [isScrollPastNav, setIsScrollPastNav] = useState(false);
   const navRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    if (navRef.current != null) {
-      setNavHeight(navRef.current.clientHeight);
-    }
-  }, []);
+    const handleScroll = () => {
+      setIsScrollPastNav(window.scrollY > navHeight);
+    };
 
-  // scroll boolean - activate scrollbar animation
-  const [scroll, setScroll] = useState(false);
+    const handleNavHeight = () => {
+      if (navRef.current) {
+        setNavHeight(navRef.current.clientHeight);
+      }
+    };
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', () =>
-        setScroll(window.pageYOffset > navHeight)
-      );
-    }
-  });
+    handleNavHeight();
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [navHeight, navRef]);
 
   return (
     <nav
       ref={navRef}
-      className={`${styles.navbar} ${scroll && styles.navbar_scroll}`}
+      className={`${styles.navbar} ${isScrollPastNav && styles.navbar_scroll}`}
     >
-      <ul className={styles.navlinkscontainer}>{generateNavLinks}</ul>
+      <HeaderLinks items={headerData} />
     </nav>
   );
-}
+};
 
-export default Header;
+type HeaderLinksProps = {
+  items: HeaderItem[];
+};
+
+const HeaderLinks: FunctionComponent<HeaderLinksProps> = ({ items }) => {
+  return (
+    <ul className={styles.navlinkscontainer}>
+      {items.map((item, index) => (
+        <li key={index}>
+          <Link to={item.url} className={`${styles.navlink}`}>
+            {item.link}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+type HeaderItem = {
+  link: string;
+  url: string;
+};
+
+const headerData = [
+  {
+    link: 'About',
+    url: '#About',
+  },
+  {
+    link: 'Work',
+    url: '#Work',
+  },
+  {
+    link: 'Resume',
+    url: '#Resume',
+  },
+];
