@@ -2,22 +2,20 @@ import React from 'react';
 import styles from './Button.module.scss';
 
 type ButtonProps = {
-  color: string;
+  color: 'primary' | 'secondary';
+  size: 'small' | 'large';
   text: string;
-  size: string;
-  action: () => void;
+  action?: () => void;
 };
 
-function Button(props: ButtonProps) {
+export const Button = ({ color, text, size, action }: ButtonProps) => {
   return (
     <button
-      type='button'
-      className={`${styles.button} ${styles[props.color]} ${styles[props.size]}`}
-      onClick={props.action}
+      type="button"
+      className={`${styles.button} ${styles[color]} ${styles[size]}`}
+      onClick={action}
     >
-      {props.text}
+      {text}
     </button>
   );
-}
-
-export default Button;
+};

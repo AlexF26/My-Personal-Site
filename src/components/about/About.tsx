@@ -7,7 +7,7 @@ import {
   faBehanceSquare,
   faDribbbleSquare,
 } from '@fortawesome/free-brands-svg-icons';
-import Button from '../button/Button';
+import { Button } from '../button/Button';
 import AnimatedAvatar from '../avatar/AnimatedAvatar';
 
 function About() {
