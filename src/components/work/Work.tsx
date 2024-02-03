@@ -5,7 +5,7 @@ import lottiedev from '../../assets/lottiedesign.json';
 import lottiedesign from '../../assets/lottiedev.json';
 import { Button } from '../button/Button';
 
-function Work() {
+export const Work = () => {
   return (
     <div id="Work" className={styles.workcontainer}>
       <div className={styles.worksection}>
@@ -59,6 +59,4 @@ function Work() {
       </div>
     </div>
   );
-}
-
-export default Work;
+};
